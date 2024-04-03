@@ -30,6 +30,7 @@
 }
 
 body {
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -39,25 +40,27 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    background: white;
 }
+
 
 header {
     height: 79px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .logo {
-    margin: 30px 50px;
+    margin: 30px 50px 30px 0;
 }
 
-nav {
+header nav {
     display: flex;
     gap: 68px;
-    padding: 0px 50px;
 }
 
-nav a {
+header nav a {
     padding-top: 16px;
 }
 
@@ -75,6 +78,96 @@ a {
     margin: 0;
     font-size: 22px;
 }
+
+.search-form {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    margin: 30px 0 40px 0;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.location-button {
+    display: flex;
+    padding: 16px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    background: var(--main-bg-color);
+    cursor: pointer;
+}
+
+.fa-location-dot {
+    color: #000000;
+}
+
+#search-input {
+    width: fit-content;
+    border: 1px solid var(--main-bg-color);
+}
+
+#search-input::placeholder {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#search-input:focus {
+    outline: none;
+}
+.search-button {
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 16px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+
+.search-button-icon {
+    display: none;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.filters > div {
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.filters > div >  a {
+    font-size: 17px;
+}
+
+.filters i {
+    padding-inline: 10px;
+}
+
+.fa-info {
+    border: 1px solid #d9d9d9;
+    width: 24px;
+    height: 24px;
+    padding: 5px 3px 0px 3px;
+    margin-right: 10px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.filters > div:hover{
+    background: var(--filter-bg-color);
+}
+
 
 .card {
     background-color: white;
@@ -114,8 +207,30 @@ a {
 
 /****** Hebergements ***********/
 .hebergements {
+    display: flex;
+    flex-flow: column;
     width: 65%;
 }
+
+.hebergements-cards-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.hebergements-cards-container a {
+    width: 30%;
+    height: 207.25px;
+    margin: 25px 0 25px 0;
+}
+
+.hebergements .card img {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px 20px 0 0;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -204,12 +319,25 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
 
     nav a:hover {
         border-top: none;
         border-bottom: 2px solid var(--main-color);
     }
 
+    .search-button-text {
+        display: none;
+    }
+
+    .search-button-icon {
+        display: block;
+        margin-left: -10px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 5px#00000067;
+    }
+    
+    .fa-magnifying-glass {
+        color: #FFFFFF;
+    }
 }
 
