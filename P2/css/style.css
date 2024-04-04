@@ -5,7 +5,6 @@
 
 
 
-
 /****** General ***********/
 
 /* * {outline: 1px solid red} */
@@ -48,7 +47,7 @@ header {
     height: 79px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .logo {
@@ -138,6 +137,7 @@ a {
 
 h3 {
     font-size: 18px;
+    margin: 0;
 }
 
 .filters > div {
@@ -198,6 +198,7 @@ h3 {
     justify-content: space-between;
 }
 
+
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
@@ -206,23 +207,33 @@ h3 {
 }
 
 /****** Hebergements ***********/
+
+
 .hebergements {
-    display: flex;
-    flex-flow: column;
+    gap: 30px;
     width: 65%;
 }
-
-.hebergements-cards-container {
-    width: 100%;
+ 
+.hebergements-cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    gap: 30px;
+    margin: 25px 0 15px 0;
 }
 
-.hebergements-cards-container a {
+
+.hebergements-cards a{
     width: 30%;
-    height: 207.25px;
-    margin: 25px 0 25px 0;
+    margin: 0 0 15px 0;
+}
+
+
+.hebergements .card-content {
+    padding: 0 15px 0 15px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 5px 0 5px 0;
 }
 
 .hebergements .card img {
@@ -276,6 +287,9 @@ h3 {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
+
+/****** Activites ***********/
 
 
 
