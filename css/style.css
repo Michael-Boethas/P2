@@ -332,18 +332,16 @@ b {
 
 footer {
     display: flex;
-    padding: 20px;
     background: var(--main-bg-color);
     line-height: 2;
 }
 
-footer section {
-    display: flex;
-    flex-flow: column;
-    padding: 0 20% 0 0;
+footer ul {
+    list-style: none;
+    padding: 0 240px 0 20px;
 }
 
-footer section > * {
+footer li  * {
     margin: 0;
 }
 
