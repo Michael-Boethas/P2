@@ -24,8 +24,10 @@
             </nav>
         </header>
         <main>
-            <h1 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre ville ou en pleine nature</p>
+            <div class="main-title">
+                <h1 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+            </div>
             <form class="search-form" method="get" action="">
                 <div class="search-bar">
                     <button class="location-button">
@@ -37,26 +39,19 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
-                <div class="filters">
+                <div class="filters-container">
                     <b>Filtres</b>
-                    <div>
-                        <i class="fa-solid fa-money-bill-wave"></i>
-                        <a href="#">Économique</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-person"></i>
-                        <a href="#">Familial</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-heart"></i>
-                        <a href="#">Romantique</a>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-fire"></i>
-                        <a href="#">Nos pépites</a>
-                    </div>
+                        <div class="filters">
+                            <a href="#"><i class="fa-solid fa-money-bill-wave"></i>Économique</a>
+                            <a href="#"><i class="fa-solid fa-person"></i>Familial</a>
+                            <a href="#"><i class="fa-solid fa-heart"></i>Romantique</a>
+                            <a href="#"><i class="fa-solid fa-fire"></i>Nos pépites</a>
+                        </div>
                 </div>
-                <p><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+                <div class="search-info">
+                    <i class="fa-solid fa-info"></i>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
             </form>
             <div class="hebergements-and-populaires">
                 <section id="hebergements" class="hebergements">
@@ -292,22 +287,24 @@
             </section>
         </main>
         <footer>
-            <ul>
-                <li><h3>À propos</h3></li>
-                <li><a href="#">Fonctionnement du site</a></li>
-                <li><a href="#">Conditions Générales</a></li>
-                <li><a href="#">Données et confidentialité</li>
-            </ul>
-            <ul>
-                <li><h3>Nos hébergements</h3></li>
-                <li><a href="#">Charte qualité</a></li>
-                <li><a href="#">Proposer votre hôtel</a></li>
-            </ul>
-            <ul>
-                <li><h3>Assistance</h3></li>
-                <li><a href="#">Centre d'aide</a></li>
-                <li><a href="#">Nous contacter</a></li>
-            </ul>
+            <div class="footer-container">
+                <ul>
+                    <li><h3>À propos</h3></li>
+                    <li><a href="#">Fonctionnement du site</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                    <li><a href="#">Données et confidentialité</li>
+                </ul>
+                <ul>
+                    <li><h3>Nos hébergements</h3></li>
+                    <li><a href="#">Charte qualité</a></li>
+                    <li><a href="#">Proposer votre hôtel</a></li>
+                </ul>
+                <ul>
+                    <li><h3>Assistance</h3></li>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
         </footer>
     </div>
 </body>
