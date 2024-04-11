@@ -31,21 +31,26 @@
     font-size: calc(15px + 0.390625vw);
 } */
 
+/* * {outline: 1px solid red;} */
+
+
+/* *, *:before, *:after {
+	margin: 0;
+	padding: 0;
+
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+} */
+
 
 /****** General ***********/
-
-/* * {outline: 1px solid red;} */
 
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
-
-
-    /* --critical-width: 320px */
-    /* --phones-width: 767.98px; */
-    /* --tablets-width: 1024px; */
-    /* --desktop-width: 1440px; */
 }
 
 * {
@@ -65,11 +70,25 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
-    background: white;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+b {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.warning-banner {
+    display: none;
+}
+
+/****** Header ***********/
 
 header {
     height: 79px;
@@ -98,21 +117,16 @@ nav a:hover {
     border-top: 2px solid var(--main-color);
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .section-title {
-    margin: 10px 0 10px 0;
+    margin: 0;
     font-size: 22px;
 }
 
 .search-form {
     display: flex;
     flex-flow: column;
-    gap: 30px;
-    margin: 30px 0 40px 0;
+    gap: 40px;
+    margin: 30px 0 25px 0;
 }
 
 .search-bar {
@@ -132,22 +146,22 @@ a {
     color: #000000;
 }
 
-#search-input {
+.search-input {
     width: fit-content;
     border: 1px solid var(--main-bg-color);
 }
 
-#search-input::placeholder {
-    color: black;
+.search-input::placeholder {
+    color: #000000;
     font-weight: bold;
     text-align: center;
 }
 
-#search-input:focus {
+.search-input:focus {
     outline: none;
 }
 .search-button {
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: bold;
     padding: 16px;
     background: var(--main-color);
@@ -166,24 +180,20 @@ a {
     gap: 15px;
 }
 
-b {
-    font-weight: bold;
-}
-
 .filters {
     display: flex;
     gap: 15px;
 }
+
 .filters a {
     border: 2px solid #d9d9d9;
     border-radius: 30px;
     padding: 15px;
-    font-size: 17px;
     font-weight: bold;
 }
 
 .filters i {
-    padding-inline: 10px;
+    padding-right: 10px;
 }
 
 .search-info {
@@ -194,9 +204,7 @@ b {
 .fa-info {
     box-sizing: border-box;
     border: 1px solid #d9d9d9;
-    width: 24px;
-    height: 24px;
-    padding: 5px 3px 0px 3px;
+    padding: 5px 10px;
     margin-right: 10px;
     border-radius: 50%;
     text-align: center;
@@ -209,7 +217,7 @@ b {
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
+    padding: 4px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
@@ -218,12 +226,14 @@ b {
 }
 
 .card-txt h3 {
-    font-size: 85%;
+    font-size: calc(10px + .4vw);
+    /* font-size: 86%; */
     margin: 5px 0 5px 0;
 }
 
 .card-txt p {
-    font-size: 75%;
+    font-size: calc(8px + .4vw);
+    /* font-size: 76%; */
     margin: 5px 0 5px 0;
 }
 
@@ -236,6 +246,7 @@ b {
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -249,6 +260,7 @@ b {
 }
 
 /****** Hebergements ***********/
+
 .hebergements {
     display: flex;
     flex-flow: column;
@@ -259,11 +271,11 @@ b {
 .hebergements-cards {
     display: flex;
     flex-flow: row wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
 .hebergements-cards a {
-    width: 29%;
+    width: 30%;
 }
 
 .hebergements-cards img {
@@ -274,6 +286,7 @@ b {
 }
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -299,7 +312,7 @@ b {
 
 .populaires-cards .card-content {
     width: 67%;
-    padding-left: 15px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -307,12 +320,8 @@ b {
 }
 
 .populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .populaires-cards .card-rating {
@@ -320,6 +329,7 @@ b {
 }
 
 /****** Activites ***********/
+
 .activites {
     padding: 50px 20px 50px 20px;
     display: flex;
@@ -349,11 +359,13 @@ b {
     border-radius: 20px 20px 0 0;
 }
 
-.activites .card-txt {
-    padding: 5px 5px 10px 15px;
+.activites .card-content {
+    padding: 5px 5px 0px 15px;
+    min-height: 50px;
 }
 
 /****** Footer ***********/
+
 footer {
     background: var(--main-bg-color);
 }
@@ -367,12 +379,16 @@ footer {
 footer ul {
     list-style: none;
     padding: 0 0 0 20px;
-    /* padding: 0 calc(10px + 12%) 0 20px; */
 }
 
-footer li  * {
-    line-height: 2;
+footer h3 {
+    font-size: calc(10px + 0.4vw);
     margin: 0;
+}
+
+footer li {
+    line-height: 2;
+    font-size: calc(9px + 0.4vw);
 }
 
 /****** Media queries ***********/
@@ -381,15 +397,10 @@ footer li  * {
 
 @media (max-width: 1024px) {
 
-
     .filters-container {
         flex-flow: column;
         align-items: flex-start;
         gap: 20px;
-    }
-
-    .filters a {
-        font-size: 100%;
     }
 
     .hebergements-and-populaires {
@@ -420,19 +431,11 @@ footer li  * {
 
     .activites .card-txt {
         padding: 5px 4px 8px 6px;
-        font-size: 75%;
-    }
-
-    footer h3 {
-        font-size: 95%;
-    }
-
-    footer li {
-        font-size: 85%;
     }
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
     
     .main-container {
@@ -441,7 +444,7 @@ footer li  * {
 
     header {
         flex-flow: column;
-        margin: 0;
+        margin: 0 0 20px 0;
         align-items: center;
     }
 
@@ -503,7 +506,8 @@ footer li  * {
 
     .filters a {
         width: 35%;
-        padding: 4% 2%;
+        padding: 3% 2%;
+        font-size: 13.5px;
     }
 
     .fa-magnifying-glass {
@@ -514,6 +518,9 @@ footer li  * {
         font-size: 16px;
     }
 
+    .search-info {
+        margin: 0 20px 0 0;
+    }
     .hebergements-and-populaires {
         flex-flow: column-reverse;
     }
@@ -581,10 +588,50 @@ footer li  * {
 
     .footer-container {
         flex-flow: column;
-        /* flex-flow: wrap-reverse; */
-        /* padding-inline: 15px; */
-        padding-inline: calc(15vw - 50px);
+        padding-inline: calc(20vw - 50px);
     }
 }
 
+/* Very small devices (phones, less than 320px) */
 
+@media (max-width: 319.98px) {
+
+    .warning-banner {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        background: lightyellow;
+        border-top: 4px solid red;
+        border-bottom: 4px solid red;
+    }
+
+    .warning-banner .fa-triangle-exclamation {
+        color: darkorange;
+        border: 2px solid darkorange;
+        border-radius: 50%;
+        padding: 10px;
+    }
+}
+
+/* Large devices (laptops and monitors, more than 1440px) */
+
+@media (min-width: 1440px) {
+    h3.card-title {
+        font-size: 16px;
+    }
+
+    p.card-subtitle {
+        font-size: 15px;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+
+    footer li {
+        font-size: 15px;
+    }
+}
