@@ -1,49 +1,6 @@
 
 /*** RESET ***/
 
-/* html {
-    box-sizing: border-box;
-    font-size: 16px;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-   */
- 
-
-/* body {
-    font-size: calc(15px + 0.390625vw);
-} */
-
-/* * {outline: 1px solid red;} */
-
-
-/* *, *:before, *:after {
-	margin: 0;
-	padding: 0;
-
-	-webkit-box-sizing: border-box !important;
-	-moz-box-sizing: border-box !important;
-	-ms-box-sizing: border-box !important;
-	box-sizing: border-box !important;
-} */
-
 
 /****** General ***********/
 
@@ -225,15 +182,17 @@ nav a:hover {
     object-fit: cover;
 }
 
+.card-content {
+    padding: 0 0 4px 4px;
+}
+
 .card-txt h3 {
-    font-size: calc(10px + .4vw);
-    /* font-size: 86%; */
+    font-size: calc(9px + .4vw);
     margin: 5px 0 5px 0;
 }
 
 .card-txt p {
     font-size: calc(8px + .4vw);
-    /* font-size: 76%; */
     margin: 5px 0 5px 0;
 }
 
@@ -272,6 +231,7 @@ nav a:hover {
     display: flex;
     flex-flow: row wrap;
     gap: 25px;
+    padding: 15px;
 }
 
 .hebergements-cards a {
@@ -381,7 +341,7 @@ footer ul {
     padding: 0 0 0 20px;
 }
 
-footer h3 {
+footer h2 {
     font-size: calc(10px + 0.4vw);
     margin: 0;
 }
@@ -390,7 +350,7 @@ footer li {
     line-height: 2;
     font-size: calc(9px + 0.4vw);
 }
-
+ 
 /****** Media queries ***********/
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -483,7 +443,6 @@ footer li {
 
     .search-form {
         margin-bottom: 15px;
-        /* padding-inline: 15px; */
         padding: 0 0 0 calc(20vw - 50px);
         font-size: calc(10px + 0.4vw);
     }
@@ -516,6 +475,7 @@ footer li {
 
     .filters-container b {
         font-size: 16px;
+        font-weight: bold;
     }
 
     .search-info {
@@ -527,7 +487,6 @@ footer li {
 
     .hebergements-and-populaires .populaires {
         border-radius: 0;
-        /* padding-inline: 15px; */
         padding-inline: calc(20vw - 50px);
         margin: 0;
     }
@@ -546,7 +505,6 @@ footer li {
     }
 
     .hebergements-and-populaires .hebergements {
-        /* padding-inline: 15px; */
         padding-inline: calc(20vw - 50px);
         background: #FFFFFF;
     }
@@ -567,7 +525,6 @@ footer li {
     }
 
     .activites {
-        /* padding-inline: 15px; */
         padding-inline: calc(20vw - 50px);
     }
 
@@ -627,7 +584,7 @@ footer li {
         font-size: 15px;
     }
 
-    footer h3 {
+    footer h2 {
         font-size: 16px;
     }
 
