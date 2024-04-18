@@ -186,13 +186,13 @@ header {
     padding: 0 0 4px 4px;
 }
 
-.card-txt h3 {
-    font-size: calc(9px + .4vw);
+.card-title {
+    font-size: calc(10px + .3vw);
     margin: 5px 0 5px 0;
 }
 
-.card-txt p {
-    font-size: calc(8px + .4vw);
+.card-subtitle {
+    font-size: calc(9px + .3vw);
     margin: 5px 0 5px 0;
 }
 
@@ -338,17 +338,17 @@ footer {
 
 footer ul {
     list-style: none;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 15px;
 }
 
 footer h2 {
-    font-size: calc(10px + 0.4vw);
+    font-size: calc(14px + 0.2vw);
     margin: 0;
 }
 
 footer li {
     line-height: 2;
-    font-size: calc(9px + 0.4vw);
+    font-size: calc(11px + 0.3vw);
 }
  
 /****** Media queries ***********/
@@ -429,12 +429,12 @@ footer li {
         border-bottom: 2px solid var(--main-color);
     }
 
-    .main-title {
-        padding: 30px 15px 0 15px;
-    }
-
     .section-title {
         font-size: 19px;
+    }
+
+    .main-title {
+        padding: 30px 30px 0 30px;
     }
 
     .main-title p {
@@ -442,8 +442,8 @@ footer li {
     }
 
     .search-form {
+        align-items: center;
         margin-bottom: 15px;
-        padding: 0 0 0 calc(20vw - 50px);
         font-size: calc(10px + 0.4vw);
     }
 
@@ -456,6 +456,10 @@ footer li {
         margin-left: -10px;
         border-radius: 15px;
         box-shadow: 0px 5px 5px #00000067;
+    }
+
+    .filters-container {
+        padding: 0 0 0 calc(15vw - 35px);
     }
 
     .filters {
@@ -473,14 +477,14 @@ footer li {
         color: #FFFFFF;
     }
 
-    .filters-container b {
-        font-size: 16px;
-        font-weight: bold;
+    b {
+        font-size: 17px;
     }
 
     .search-info {
         margin: 0 20px 0 0;
     }
+    
     .hebergements-and-populaires {
         flex-flow: column-reverse;
     }
@@ -576,12 +580,13 @@ footer li {
 /* Large devices (laptops and monitors, more than 1440px) */
 
 @media (min-width: 1440px) {
+
     h3.card-title {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     p.card-subtitle {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     footer h2 {
